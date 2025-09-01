@@ -1,0 +1,44 @@
+
+=== Parte A - Listas ===07ae2
+Pedidos iniciales (ArrayList):
+ - Pedido{cliente='Ana', producto='Pizza', total=40.0}       
+ - Pedido{cliente='Luis', producto='Hamburguesa', total=25.0}
+ - Pedido{cliente='Maria', producto='Sushi', total=60.0}     
+ - Pedido{cliente='Carlos', producto='Pizza', total=55.0}    
+ - Pedido{cliente='Sofia', producto='Ensalada', total=20.0}  
+
+Con urgentes (ArrayList):
+ - Pedido{cliente='Elena', producto='Pizza', total=70.0}     
+ - Pedido{cliente='Pedro', producto='Hot Dog', total=15.0}   
+ - Pedido{cliente='Ana', producto='Pizza', total=40.0}       
+ - Pedido{cliente='Luis', producto='Hamburguesa', total=25.0}
+ - Pedido{cliente='Maria', producto='Sushi', total=60.0}     
+ - Pedido{cliente='Carlos', producto='Pizza', total=55.0}  
+ - Pedido{cliente='Sofia', producto='Ensalada', total=20.0}
+
+Con urgentes (LinkedList):
+ - Pedido{cliente='Laura', producto='Pizza', total=80.0}
+ - Pedido{cliente='Miguel', producto='Tacos', total=30.0}
+ - Pedido{cliente='Elena', producto='Pizza', total=70.0}
+ - Pedido{cliente='Pedro', producto='Hot Dog', total=15.0}
+ - Pedido{cliente='Ana', producto='Pizza', total=40.0}
+ - Pedido{cliente='Luis', producto='Hamburguesa', total=25.0}
+ - Pedido{cliente='Maria', producto='Sushi', total=60.0}
+ - Pedido{cliente='Carlos', producto='Pizza', total=55.0}
+ - Pedido{cliente='Sofia', producto='Ensalada', total=20.0}
+
+Explicación: Para 1000 pedidos urgentes, LinkedList es más eficiente en inserciones al inicio, ya que no requiere mover todos los elementos como en ArrayList.
+
+=== Parte B - Conjunto (HashSet) ===
+Contenido del HashSet: [Pedido{cliente='Maria', producto='Sushi', total=60.0}, Pedido{cliente='Ana', producto='Pizza', total=40.0}, Pedido{cliente='Luis', producto='Hamburguesa', total=25.0}]
+Explicación: Los duplicados no se almacenan en un HashSet. Solo se guarda un objeto único por sus reglas de hashCode/equals.
+
+=== Parte C - Mapas (HashMap) ===
+Pedidos de Maria: [Pedido{cliente='Maria', producto='Sushi', total=60.0}, Pedido{cliente='Maria', producto='Pizza', total=80.0}]
+Total gastado por Ana: $60.0
+Total gastado por Luis: $80.0
+Total gastado por Maria: $140.0
+
+=== Parte D - Genéricos ===
+Pedidos de Pizza: [Pedido{cliente='Ana', producto='Pizza', total=40.0}, Pedido{cliente='Carlos', producto='Pizza', total=55.0}]
+Pedidos mayores a $50: [Pedido{cliente='Maria', producto='Sushi', total=60.0}, Pedido{cliente='Carlos', producto='Pizza', total=55.0}]

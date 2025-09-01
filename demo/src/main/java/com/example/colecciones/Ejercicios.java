@@ -14,7 +14,7 @@ import com.example.modelo.Pedido;
 public class Ejercicios {
 
     public static void parteA_Listas() {
-        System.out.println("=== Parte A – Listas ===");
+        System.out.println("=== Parte A - Listas ===");
 
         // 1. ArrayList con 5 pedidos
         List<Pedido> pedidosArray = new ArrayList<>();
@@ -24,24 +24,38 @@ public class Ejercicios {
         pedidosArray.add(new Pedido("Carlos", "Pizza", 55));
         pedidosArray.add(new Pedido("Sofia", "Ensalada", 20));
 
-        System.out.println("Pedidos iniciales (ArrayList): " + pedidosArray);
+        System.out.println("Pedidos iniciales (ArrayList):");
+        for (Pedido p : pedidosArray) {
+            System.out.println(" - " + p);
+        }
 
         // 2. Insertar 2 urgentes al inicio
         pedidosArray.add(0, new Pedido("Pedro", "Hot Dog", 15));
         pedidosArray.add(0, new Pedido("Elena", "Pizza", 70));
-        System.out.println("Con urgentes (ArrayList): " + pedidosArray);
+
+        System.out.println("\nCon urgentes (ArrayList):");
+        for (Pedido p : pedidosArray) {
+            System.out.println(" - " + p);
+        }
 
         // 3. Repetir con LinkedList
         LinkedList<Pedido> pedidosLinked = new LinkedList<>(pedidosArray);
         pedidosLinked.addFirst(new Pedido("Miguel", "Tacos", 30));
         pedidosLinked.addFirst(new Pedido("Laura", "Pizza", 80));
-        System.out.println("Con urgentes (LinkedList): " + pedidosLinked);
 
-        System.out.println("Explicación: Para 1000 pedidos urgentes, LinkedList es más eficiente en inserciones al inicio, ya que no requiere mover todos los elementos como en ArrayList.");
+        System.out.println("\nCon urgentes (LinkedList):");
+        for (Pedido p : pedidosLinked) {
+            System.out.println(" - " + p);
+        }
+
+        System.out.println(
+            "\nExplicación: Para 1000 pedidos urgentes, LinkedList es más eficiente en inserciones al inicio, " +
+            "ya que no requiere mover todos los elementos como en ArrayList."
+        );
     }
 
     public static void parteB_HashSet() {
-        System.out.println("\n=== Parte B – Conjunto (HashSet) ===");
+        System.out.println("\n=== Parte B - Conjunto (HashSet) ===");
 
         Set<Pedido> pedidosSet = new HashSet<>();
         pedidosSet.add(new Pedido("Ana", "Pizza", 40));
@@ -50,11 +64,12 @@ public class Ejercicios {
         pedidosSet.add(new Pedido("Ana", "Pizza", 40)); // duplicado
 
         System.out.println("Contenido del HashSet: " + pedidosSet);
-        System.out.println("Explicación: Los duplicados no se almacenan en un HashSet. Solo se guarda un objeto único por sus reglas de hashCode/equals.");
+        System.out.println("Explicación: Los duplicados no se almacenan en un HashSet. " +
+                           "Solo se guarda un objeto único por sus reglas de hashCode/equals.");
     }
 
     public static void parteC_HashMap() {
-        System.out.println("\n=== Parte C – Mapas (HashMap) ===");
+        System.out.println("\n=== Parte C - Mapas (HashMap) ===");
 
         Map<String, List<Pedido>> pedidosPorCliente = new HashMap<>();
 
@@ -86,7 +101,7 @@ public class Ejercicios {
     }
 
     public static void parteD_Genericos() {
-        System.out.println("\n=== Parte D – Genéricos ===");
+        System.out.println("\n=== Parte D - Genéricos ===");
 
         List<Pedido> pedidos = new ArrayList<>();
         pedidos.add(new Pedido("Ana", "Pizza", 40));
